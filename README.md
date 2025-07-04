@@ -1,6 +1,7 @@
 # Nextra Docs Template 
 
 This is created with nextra-docs-template - [shuding/nextra-docs-template](https://github.com/shuding/nextra-docs-template)
+
 Parts of the theme copied from - [overextended/overextended.github.io](https://github.com/overextended/overextended.github.io)
 
 ## Local Development
