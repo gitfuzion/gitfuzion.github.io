@@ -35,14 +35,9 @@ jobs:
 
       - name: Export static site
         run: pnpm export
-        
-      - name: List out folder contents
-        run: ls -la ./out
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
-          publish_branch: gh-pages
-          force_orphan: true
