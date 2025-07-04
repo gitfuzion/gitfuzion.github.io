@@ -33,14 +33,8 @@ jobs:
       - name: Build website
         run: pnpm build
 
-      - name: Export static site
-        run: pnpm export
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
-          cname: docs.qbox.re
-          user_name: github-actions[bot]
-          user_email: 41898282+github-actions[bot]@users.noreply.github.com
