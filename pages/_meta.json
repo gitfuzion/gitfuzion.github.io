@@ -1,6 +1,8 @@
 {
   "index": "Introduction",
-  "resources": "Resources",
+  "resources": {
+    "fz-cityhall": "fz-cityhall"
+  },
   "about": {
     "title": "About",
     "type": "page"

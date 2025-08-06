@@ -1,0 +1,77 @@
+# FzCityhall
+
+```
+Config = {}
+
+Config.Framework = "auto" -- "qb", "esx", "auto"
+Config.Inventory = "qb" -- "qb", "ox"
+Config.Notify = "qb" -- "qb", "esx", "ox"
+Config.LicenseSystem = "inventory" -- "um-idcard", "bl_idcard", "inventory"
+Config.UseTarget = true -- Enable to use target (supports both ox_target and qb-target)
+Config.Debug = true -- Debug is only needed when developing
+
+Config.MoneyType = "cash" -- "cash", "bank"
+
+Config.PedModel = "a_m_m_hasjew_01" -- Ped model for the city hall
+Config.PedCoords = vec4(-267.33, -959.86, 31.22, 207.23) -- Coordinates for the Ped (x, y, z, heading)
+Config.PedScenario = "WORLD_HUMAN_CLIPBOARD" -- Scenario/Animation for the Ped 
+
+Config.Blip = {
+    enable = true, -- Enable or disable blips
+    label = "City Hall", -- Name displayed on the blip
+    sprite = 487, -- Shape of the blip https://docs.fivem.net/docs/game-references/blips/
+    colour = 2, -- Colour of the blip
+    scale = 0.8, -- Size of the blip
+}
+
+Config.Jobs = {
+    {
+        title = 'Unemployed', -- Name of the job
+        description = 'Maybe it\'s time to get a job?', -- Description of the job
+        image = 'https://cdn-icons-png.flaticon.com/512/9187/9187532.png', -- Image used for the job
+        id = 'unemployed', -- Id of the job used to identify and set the players job needs to match the one in jobs.lua
+    },
+    {
+        title = 'Garbage Collector',
+        description = 'Collect garbage around the city.',
+        image = 'https://cdn-icons-png.flaticon.com/512/6722/6722999.png',
+        id = 'garbage',
+    },
+    {
+        title = 'Taxi Driver',
+        description = 'Drive people around the city as a taxi driver.',
+        image = 'https://cdn-icons-png.flaticon.com/512/8633/8633703.png',
+        id = 'taxi',
+    },
+    {
+        title = 'Mechanic',
+        description = 'Repair vehicles and assist players with their car issues.',
+        image = 'https://cdn-icons-png.flaticon.com/512/8598/8598993.png',
+        id = 'mechanic',
+    },
+}
+
+Config.Licenses = {
+    {
+        title = 'ID Card', -- Name of the license
+        description = 'You can use this card to identify yourself.', -- Description of the license
+        cost = 50, -- Price to purchase the license
+        jobrequired = 'none', -- Job needed to purchase the license
+        id = 'id_card', -- Id of the license used to identify and give the players the item needs to match the one in items.lua
+    },
+    {
+        title = 'Driver\'s License',
+        description = 'Allows you to drive vehicles legally.',
+        cost = 200,
+        jobrequired = 'none',
+        id = 'driver_license',
+    },
+    {
+        title = 'Gun License',
+        description = 'Gives you permission to carry a firearm.',
+        cost = 500,
+        jobrequired = 'police',
+        id = 'weaponlicense',
+    },
+}
+```
