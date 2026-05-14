@@ -1,0 +1,66 @@
+# FzDeliveryJob
+
+## Configuration
+
+```lua
+return {
+
+	notify = "ox", -- 'qb', 'esx', 'qbx' or 'ox'
+	useTextUI = false, -- Set to true to use textui or false to use targetting
+	target = "ox", -- 'qb' or 'ox' only applies when useTextUI is false
+	textUI = "ox", -- 'qb', 'esx' or 'ox' only applies when useTextUI is true
+	debug = false, -- Turn debug on or off but recommended to have it off for normal use
+
+	paymentType = "bank", -- 'bank', 'cash' or 'money' (If using ESX use 'money' instead of 'cash')
+	jobName = "delivery", -- The name of the job that players will be set to when they clock in
+
+	routeBlips = { -- Blip settings for delivery stops
+		sprite = 280,
+		display = 4,
+		scale = 0.8,
+		colour = 3,
+	},
+
+	Locations = {
+		["los_santos_warehouse"] = {
+			label = "Delivery Job", -- Label for the delivery warehouse
+			coords = vec3(1244.22, -3247.52, 5.03), -- Coords for the delivery warehouse PED
+			vehicleSpawnCoords = vec4(1244.51, -3263.15, 4.65, 269.36), -- Coords for where the delivery vehicle will spawn
+			endRouteCoords = vec3(1250.21, -3248.28, 4.85), -- Coords for where the delivery route ends
+			blip = {
+				enabled = true, -- Set to true to show a blip for the delivery warehouse
+				sprite = 478, -- Blip sprite for the delivery warehouse
+				display = 4, -- Blip display for the delivery warehouse
+				scale = 0.8, -- Blip scale for the delivery warehouse
+				colour = 3, -- Blip colour for the delivery warehouse
+				label = "Los Santos Delivery Warehouse", -- Blip label for the delivery warehouse
+			},
+			ped = {
+				model = "s_m_y_airworker", -- Ped model for the delivery warehouse
+				heading = 279.43, -- Ped heading for the delivery warehouse
+				scenario = "WORLD_HUMAN_CLIPBOARD", -- Ped scenario for the delivery warehouse
+			},
+		},
+		["paleto_warehouse"] = {
+			label = "Delivery Job",
+			coords = vec3(177.27, 6398.17, 30.32),
+			vehicleSpawnCoords = vec4(185.53, 6395.16, 30.38, 296.61),
+			endRouteCoords = vec3(182.18, 6402.17, 30.3),
+			blip = {
+				enabled = true,
+				sprite = 478,
+				display = 4,
+				scale = 0.8,
+				colour = 3,
+				label = "Paleto Delivery Warehouse",
+			},
+			ped = {
+				model = "s_m_y_airworker",
+				heading = 318.55,
+				scenario = "WORLD_HUMAN_CLIPBOARD",
+			},
+		},
+	},
+}
+
+```
